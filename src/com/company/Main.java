@@ -9,6 +9,9 @@ public class Main {
         Scanner key = new Scanner(System.in);
 
         double[] dailyAverageTemp = new double[7];
+        double n = dailyAverageTemp.length;
+        double sumF = 0;
+        double averageF;
 
         System.out.println("Please enter the temperatures in Fahrenheit for the next 7 days: ");
 
@@ -21,7 +24,14 @@ public class Main {
         dailyAverageTemp[6] = key.nextDouble();
 
         for (int i=0; i<dailyAverageTemp.length; i++) {
-            System.out.println (dailyAverageTemp [i]);}
+            System.out.println (dailyAverageTemp [i]);
+            sumF = sumF + dailyAverageTemp[i];
+            }
+
+        averageF =  sumF / n;
+
+        System.out.println ("Average temperature in Fahrenheit for the week is: " + averageF);
+
 
 
     }
